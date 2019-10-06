@@ -47,4 +47,16 @@ title: Modern_CPP_book_01
 - (본문내용과 별개) When to memory management? : [stacoverflow:When_are_Variables_removed_from..m](https://stackoverflow.com/questions/1880984/when-are-variables-removed-from-memory-in-c/1881066#1881066)
   - C++에서는, scopre를 벗어나면 자동으로 free되는데, 동적할당된 경우는 직접 해제해줘야 한다.
   - RAII참고 필요 (Resource Acquisutuin Is Initialization)
+- 포인터 관련 오류를 최소화하는 전략 세 가지
+  1. 표준 컨테이너를 사용 (std::vector)
+  2. 캡슐화 : 위에서 언급한 RAII 
+  3. 스마트 포인터의 사용. 
+- 스마트 포인터 : C++11
+   1. unique_ptr : 참조한 데이터의 unique한 ownership을 의미. 기본적으로 일반 포인터와 같이 사용
+    - 하지만, 소유권이 있기 때문에. 다른 객체는 delete를 할 수 없음 -> double free버그 방지 가능
+    - 소유권의 이전은 가능하다 : 복사 생성자는 정의되지 않았지만, 이동 생성자는 가능. 
+    ```cpp
+    std::unique_ptr<A> pb = std::move(pa);
+    ```
+    위의 코드에서, 소유권은 pa에서 pb로 강제로 이전된다. 
 

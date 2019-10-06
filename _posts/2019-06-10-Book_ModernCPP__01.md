@@ -68,5 +68,6 @@ title: Modern_CPP_book_01
       cout << ptr01.use_count() << endl; // 2
       auto ptr03 = ptr01;                // 대입을 통한 초기화
       cout << ptr01.use_count() << endl; // 3 
-      ``` (출처 : http://tcpschool.com/cpp/cpp_template_smartPointer)
+      ``` 
+      (출처 : http://tcpschool.com/cpp/cpp_template_smartPointer)
 

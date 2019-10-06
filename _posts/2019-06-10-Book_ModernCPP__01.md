@@ -55,9 +55,9 @@ title: Modern_CPP_book_01
     1. unique_ptr : 참조한 데이터의 unique한 ownership을 의미. 기본적으로 일반 포인터와 같이 사용
       - 하지만, 소유권이 있기 때문에. 다른 객체는 delete를 할 수 없음 -> double free버그 방지 가능
       - 소유권의 이전은 가능하다 : 복사 생성자는 정의되지 않았지만, 이동 생성자는 가능. 
-      ```cpp
-      std::unique_ptr<A> pb = std::move(pa);
-      ```
+```cpp
+std::unique_ptr<A> pb = std::move(pa);
+```
       - 위의 코드에서, 소유권은 pa에서 pb로 강제로 이전된다. 
     2. shared_ptr : 여러 파티가 공통으로 사용하는 메모리. 더 이상 데이터를 참조하지 않는 즉시 메모리 자동 해제
       - referrence couter를 가지고 있다. use_count() 

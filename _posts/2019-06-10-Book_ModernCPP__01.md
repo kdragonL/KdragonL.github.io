@@ -39,5 +39,9 @@ title: Modern_CPP_book_01
   - 참고 : \[[try-catch 개괄](https://supercoding.tistory.com/1)\] \[[Stack Unwinding](https://supercoding.tistory.com/2)\]
   
 #### 1.7 I/O
+- (본문 내용은 특이사항 없음)
 - 정확하게 cout, cin은 무엇인가? : iostream에 선언된 std::ostream, std::istream class의 글로벌 object이다.
-- 참고 : https://stackoverflow.com/questions/20070606/cout-and-cin-are-not-functions-so-what-are-they
+- 참고 : [cout-and-cin-are-not-functions-so-what-are-they](https://stackoverflow.com/questions/20070606/cout-and-cin-are-not-functions-so-what-are-they)
+
+#### 1.8 배열, 포인터, 레퍼런스
+- 

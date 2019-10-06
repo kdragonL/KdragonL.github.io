@@ -1,6 +1,6 @@
 ---
-layout:post
-title:Modern_CPP_book_01
+layout: post
+title: Modern_CPP_book_01
 ---
 
 

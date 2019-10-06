@@ -13,13 +13,4 @@ title: Modern_CPP_book_01
 ```cpp 
 increment(i-9); // 오류 발생한다. 
 ```
-ㅇㅇ
-이것은 코드이다!
-```cpp
-std::cout<<"Hello workd!";
-for(int i=0 ; i<30 ; i++){
-
-  setSampleCode(i);
-
-}
-```
+- 1.5.1.3 : 인수 목록의 끝에서만 여러 개의 기본값을 선언할 수 있다. 즉, 기본값을 갖는 인수 뒤에는 기본값이 없는 인수를 가질 수 없다.

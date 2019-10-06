@@ -5,7 +5,7 @@ title: Modern_CPP_book_01
 
 
 이것은 코드이다!
-'''C++
+'''CPP
 std::cout<<"Hello workd!";
 '''
 

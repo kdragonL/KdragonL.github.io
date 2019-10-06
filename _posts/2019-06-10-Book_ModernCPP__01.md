@@ -35,4 +35,4 @@ title: Modern_CPP_book_01
   - throw로 예외로 전달하고 싶은 객체를 써준다. 아무 개체나 상관 없지만, C++ std lib로 가능.
   - throw가 발생하면 함수를 빠져나가는데, stack에서 생성되었떤 객체들도 모두 소멸시켜준다.
   - throw가 발생하면 가장 가까운 catch를 찾는다. 그리고 catch는 여러개 사용 가능
-  - 참고 : \[[try-catch 개괄]\](https://supercoding.tistory.com/1) \[[Stack Unwinding]\](https://supercoding.tistory.com/2)
+  - 참고 : \[[try-catch 개괄](https://supercoding.tistory.com/1)\] \[[Stack Unwinding](https://supercoding.tistory.com/2)\]

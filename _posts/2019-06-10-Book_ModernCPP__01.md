@@ -44,4 +44,7 @@ title: Modern_CPP_book_01
 - 참고 : [cout-and-cin-are-not-functions-so-what-are-they](https://stackoverflow.com/questions/20070606/cout-and-cin-are-not-functions-so-what-are-they)
 
 #### 1.8 배열, 포인터, 레퍼런스
-- 
+- (본문내용과 별개) When to memory management? : [stacoverflow:When_are_Variables_removed_from..m](https://stackoverflow.com/questions/1880984/when-are-variables-removed-from-memory-in-c/1881066#1881066)
+  - C++에서는, scopre를 벗어나면 자동으로 free되는데, 동적할당된 경우는 직접 해제해줘야 한다.
+  - RAII참고 필요 (Resource Acquisutuin Is Initialization)
+

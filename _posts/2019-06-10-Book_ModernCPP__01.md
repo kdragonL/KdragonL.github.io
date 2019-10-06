@@ -1,7 +1,7 @@
---
+---
 layout:post
-title:Modern_CPP_book_01 page
---
+title:Modern_CPP_book_01
+---
 
 
 이것은 코드이다!

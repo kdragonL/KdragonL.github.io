@@ -37,3 +37,7 @@ title: Modern_CPP_book_01
     (*이부분은 좀 더 구체적인 학습이 필요할 것 같다.*)
   - throw가 발생하면 가장 가까운 catch를 찾는다. 그리고 catch는 여러개 사용 가능 
   - 참고 : \[[try-catch 개괄](https://supercoding.tistory.com/1)\] \[[Stack Unwinding](https://supercoding.tistory.com/2)\]
+  
+#### 1.7 I/O
+- 정확하게 cout, cin은 무엇인가? : iostream에 선언된 std::ostream, std::istream class의 글로벌 object이다.
+- 참고 : https://stackoverflow.com/questions/20070606/cout-and-cin-are-not-functions-so-what-are-they

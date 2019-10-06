@@ -58,5 +58,15 @@ title: Modern_CPP_book_01
     ```cpp
     std::unique_ptr<A> pb = std::move(pa);
     ```
-    위의 코드에서, 소유권은 pa에서 pb로 강제로 이전된다. 
+    - 위의 코드에서, 소유권은 pa에서 pb로 강제로 이전된다. 
+   2. shared_ptr : 여러 파티가 공통으로 사용하는 메모리. 더 이상 데이터를 참조하지 않는 즉시 메모리 자동 해제
+    - referrence couter를 가지고 있다. use_count() 
+    ```cpp
+    shared_ptr<int> ptr01(new int(5)); // int형 shared_ptr인 ptr01을 선언하고 초기화함.
+    cout << ptr01.use_count() << endl; // 1
+    auto ptr02(ptr01);                 // 복사 생성자를 이용한 초기화
+    cout << ptr01.use_count() << endl; // 2
+    auto ptr03 = ptr01;                // 대입을 통한 초기화
+    cout << ptr01.use_count() << endl; // 3 
+    ``` (출처 : http://tcpschool.com/cpp/cpp_template_smartPointer)
 

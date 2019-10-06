@@ -34,6 +34,6 @@ title: Modern_CPP_book_01
   - try .. throw .. catch. 조건문에는 비지니스 로직만 담는 게 나을 것이다. 
   - throw로 예외로 전달하고 싶은 객체를 써준다. 아무 개체나 상관 없지만, C++ std lib로 가능.
   - throw가 발생하면 함수를 빠져나가는데, stack에서 생성되었떤 객체들도 모두 소멸시켜준다. 
-    ++이부분은 좀 더 구체적인 학습이 필요할 것 같다.++
+    (*이부분은 좀 더 구체적인 학습이 필요할 것 같다.*)
   - throw가 발생하면 가장 가까운 catch를 찾는다. 그리고 catch는 여러개 사용 가능 
   - 참고 : \[[try-catch 개괄](https://supercoding.tistory.com/1)\] \[[Stack Unwinding](https://supercoding.tistory.com/2)\]

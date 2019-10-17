@@ -77,9 +77,10 @@ title: Modern_CPP_book_01
       - uncounted reference to a shared_ptr로 볼 수 있다. 
 
   - 스마트 포인터에 대한 추가 내용 : https://stackoverflow.com/questions/106508/what-is-a-smart-pointer-and-when-should-i-use-one
-    스마트 포인터도 그 자체로 하나의 class다. raw한 pointer를 wrapping하고 있는. 
+  - 스마트 포인터도 그 자체로 하나의 class다. raw한 pointer를 wrapping하고 있는. 
 
 - 1.8.6 : 함수 내의 지역 변수는 함수 스코프 내에서만 유효하다. 포인터 혹은 레퍼런스를 쓸 때에 유의 필요
 
 #### 1.9 기타 (주석/전처리기/매크로)
-- 헤더 파일 include 시 꺽쇠와 쌍따옴표의 차이 : standard library와 user difined로 널리 일컫어지는데 꼭 그렇지는 않다. 꺽쇠 안에 들어가는 건 파일일 필요가 없고, 쌍따옴표 안에 들어가는 건 반드시 파일이어야 한다. 
+- 헤더 파일 include 시 꺽쇠와 쌍따옴표의 차이 : standard library와 user difined로 널리 일컫어지는데 통상적으로 그렇긴 하지만 꼭은 아니다. 꺽쇠 안에 들어가는 건 파일일 필요가 없고, 쌍따옴표 안에 들어가는 건 반드시 파일이어야 한다. 
+- 전처리기 ifndef : 대규모 코드에서 선언의 중복을 방지하기 위함. 

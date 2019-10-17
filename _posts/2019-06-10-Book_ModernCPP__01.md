@@ -59,9 +59,10 @@ title: Modern_CPP_book_01
     std::unique_ptr<A> pb = std::move(pa);
     ```
       - 위의 코드에서, 소유권은 pa에서 pb로 강제로 이전된다. 
-      - 특정 코드블록에서 쓰이거나, 다른 데이터의 member로서 쓰일 때 유용하다.
+      - 특정 코드블록에서 쓰이거나, 다른 데이터의 member로서 자주 쓰인다.
     2. shared_ptr : 여러 파티가 공통으로 사용하는 메모리. 더 이상 데이터를 참조하지 않는 즉시 메모리 자동 해제
       - referrence couter를 가지고 있다. use_count() 
+      - 특정한 code section이나 다른 객체에 종속적이지 않다. (unique_ptr과 그게 다름)
     ```cpp
     shared_ptr<int> ptr01(new int(5)); // int형 shared_ptr인 ptr01을 선언하고 초기화함.
     cout << ptr01.use_count() << endl; // 1
@@ -71,7 +72,14 @@ title: Modern_CPP_book_01
     cout << ptr01.use_count() << endl; // 3 
     ``` 
       - (출처 : http://tcpschool.com/cpp/cpp_template_smartPointer)
+      - 그런데 단점이 있다. dangling reference를 만들 수 있는 것 / circular reference를 만들 수 있는 것
     3. weak_ptr : 공유하더라도 소유권을 주장하지 않는다. shard_ptr의 객체만 참조할 뿐, shard_ptr의 reference count를 올리지는 않는다는 것. 
+      - uncounted reference to a shared_ptr로 볼 수 있다. 
 
   - 스마트 포인터에 대한 추가 내용 : https://stackoverflow.com/questions/106508/what-is-a-smart-pointer-and-when-should-i-use-one
     스마트 포인터도 그 자체로 하나의 class다. raw한 pointer를 wrapping하고 있는. 
+
+- 1.8.6 : 함수 내의 지역 변수는 함수 스코프 내에서만 유효하다. 포인터 혹은 레퍼런스를 쓸 때에 유의 필요
+
+#### 1.9 기타 (주석/전처리기/매크로)
+- 헤더 파일 include 시 꺽쇠와 쌍따옴표의 차이 : standard library와 user difined로 널리 일컫어지는데 꼭 그렇지는 않다. 꺽쇠 안에 들어가는 건 파일일 필요가 없고, 쌍따옴표 안에 들어가는 건 반드시 파일이어야 한다. 

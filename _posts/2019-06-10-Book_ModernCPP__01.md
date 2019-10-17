@@ -59,6 +59,7 @@ title: Modern_CPP_book_01
     std::unique_ptr<A> pb = std::move(pa);
     ```
       - 위의 코드에서, 소유권은 pa에서 pb로 강제로 이전된다. 
+      - 특정 코드블록에서 쓰이거나, 다른 데이터의 member로서 쓰일 때 유용하다.
     2. shared_ptr : 여러 파티가 공통으로 사용하는 메모리. 더 이상 데이터를 참조하지 않는 즉시 메모리 자동 해제
       - referrence couter를 가지고 있다. use_count() 
     ```cpp
@@ -72,3 +73,5 @@ title: Modern_CPP_book_01
       - (출처 : http://tcpschool.com/cpp/cpp_template_smartPointer)
     3. weak_ptr : 공유하더라도 소유권을 주장하지 않는다. shard_ptr의 객체만 참조할 뿐, shard_ptr의 reference count를 올리지는 않는다는 것. 
 
+  - 스마트 포인터에 대한 추가 내용 : https://stackoverflow.com/questions/106508/what-is-a-smart-pointer-and-when-should-i-use-one
+    스마트 포인터도 그 자체로 하나의 class다. raw한 pointer를 wrapping하고 있는. 

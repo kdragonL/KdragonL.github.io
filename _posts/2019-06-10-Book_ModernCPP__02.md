@@ -27,7 +27,9 @@ title: Modern_CPP_book_01
   complex(double rnew, double inew) : r(rnew), i(inew)
   ```
 
-- 
+- 2.3.1.1 : 디폴트 생성자
+  - 주로 모든 멤버를 0, -1, NULL, 빈문자열로 초기화한다. 즉, 디폴트 생성자의 임무는 쓰레기는 치우는 것. 
+    (http://soen.kr/lecture/ccpp/cpp3/26-2-1.htm)
 
 
 

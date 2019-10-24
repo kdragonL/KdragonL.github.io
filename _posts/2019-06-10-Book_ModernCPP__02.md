@@ -46,37 +46,37 @@ title: Modern_CPP_book_01
   - 생성자에서 다른 생성자를 호출한다. 아래의 예를 살펴보자 (출처 : http://www.qaupot.com/wordpress/?p=2385)
   - Coordinate를 1차원으로, 2차원으로 혹은 3, 4차원으로 쓸 수도 있다. 인수를 4개 받는 4차원의 생성자에서 4개 멤버에 인수 4개를 일일이 할당하는 것 보다는, 아래처럼 생성자가 생성자를 호출하는 방식이면 간단하게 해결 가능하다. 이보다 더욱 복잡한 상황도 있을 수 있다.
   ``` cpp
-  class Coordinate
-{
-public:
-    int w, x, y, z;
+      class Coordinate
+      {
+      public:
+          int w, x, y, z;
 
-    Coordinate(int w) 
-    { 
-        printf("Call 1D\n"); 
-        this->w = w;
-    }
-    Coordinate(int w, int x) : Coordinate(w)
-    { 
-        printf("Call 2D\n");
-        this->x = x; 
-    }
-    Coordinate(int w, int x, int y) : Coordinate(w,x) 
-    { 
-        printf("Call 3D\n");
-        this->y = y;
-    }
-    Coordinate(int w, int x, int y, int z) : Coordinate(w, x, y)
+          Coordinate(int w) 
+          { 
+              printf("Call 1D\n"); 
+              this->w = w;
+          }
+          Coordinate(int w, int x) : Coordinate(w)
+          { 
+              printf("Call 2D\n");
+              this->x = x; 
+          }
+          Coordinate(int w, int x, int y) : Coordinate(w,x) 
+          { 
+              printf("Call 3D\n");
+              this->y = y;
+          }
+          Coordinate(int w, int x, int y, int z) : Coordinate(w, x, y)
+          {
+              printf("Call 4D\n");
+              this->z = z; 
+          }
+      };
+
+    int main(int argc, char** argv)
     {
-        printf("Call 4D\n");
-        this->z = z; 
+        Coordinate c(1, 2, 3, 4);
     }
-};
-
-int main(int argc, char** argv)
-{
-    Coordinate c(1, 2, 3, 4);
-}
   ```
 
 
